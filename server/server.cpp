@@ -290,7 +290,7 @@ a:
         }
         if(pasv_fd!=-1) close(pasv_fd);
         if(data_fd!=-1) close(data_fd);
-        data_fd-1,pasv_fd=-1;
+        data_fd=-1,pasv_fd=-1;
         close(ctrl_fd);
         cout << "Client disconnected.\n";
 }

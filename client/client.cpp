@@ -192,15 +192,15 @@ void put_(){
                 close(fd);
                 close(data_fd);
                 data_fd=-1;
-                recvResponse(ctrl_fd); // Try to consume final response if any
+                recvResponse(ctrl_fd); 
                 return;
             }
             sent+=q;
         }
     }  
     close(fd);
-    shutdown(data_fd, SHUT_WR); // Gracefully close write side
-    cout<<recvResponse(ctrl_fd); // Get final response from server
+    shutdown(data_fd, SHUT_WR); 
+    cout<<recvResponse(ctrl_fd); 
     close(data_fd);
     data_fd=-1;
 
